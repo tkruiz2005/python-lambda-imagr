@@ -21,6 +21,15 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+      Tags: 
+       - Key: "Environment"
+         Value: {{cookiecutter.environment}}
+       - Key: "Owner"
+         Value: {{cookiecutter.owner}}
+       - Key: "CostCenter"
+         Value: {{cookiecutter.costcenter}}
+       - Key: "ProductName"
+         Value: {{cookiecutter.Producto}}
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
