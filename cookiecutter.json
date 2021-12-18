@@ -1,4 +1,8 @@
 {
     "project_name": "Nombre del proyecto",
-    "runtime": "python3.8"
+    "runtime": "python3.8",
+    "environment": "Desarrollo",
+    "owner": "Owner",
+    "costcenter": "99999",
+    "productname": "Producto"
 }

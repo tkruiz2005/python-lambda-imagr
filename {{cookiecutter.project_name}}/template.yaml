@@ -24,8 +24,10 @@ Resources:
             Path: /hello
             Method: get
       Tags:
-        WorkloadType: "ECSWebApp"
-        WorkloadName: "ACMECustomerPortal"
+        Environment: {{ cookiecutter.environment }}
+        Owner: {{ cookiecutter.owner }}
+        CostCenter: {{ cookiecutter.costcenter }}
+        ProductName: {{ cookiecutter.productname }}
 
 
 Outputs:
