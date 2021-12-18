@@ -1,6 +1,6 @@
 {
-    "project_name": "Name of the project",
-    "runtime": "python3.9",
+    "project_name": "Nombre del proyecto",
+    "runtime": "python3.8",
     "architectures": {
         "value": []
     }
