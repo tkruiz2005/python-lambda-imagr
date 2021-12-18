@@ -29,7 +29,7 @@ Resources:
        - Key: "CostCenter"
          Value: {{cookiecutter.costcenter}}
        - Key: "ProductName"
-         Value: {{cookiecutter.Producto}}
+         Value: {{cookiecutter.productname}}
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
