@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  {{cookiecutter.runtime}}
+  {{ cookiecutter.project_name }}
 
-  Sample SAM Template for {{cookiecutter.project_name}}
+  Sample SAM Template for {{ cookiecutter.project_name }}
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -14,22 +14,21 @@ Resources:
   HelloWorldFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      PackageType: Image
+      CodeUri: hello_world/
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      {%- if cookiecutter.architectures.value != []%}
+      Architectures:
+      {%- for arch in cookiecutter.architectures.value %}
+        - {{arch}}
+      {%- endfor %}
+      {%- endif %}
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
             Path: /hello
             Method: get
-      Tags: 
-       - Key: "Environment"
-         Value: {{cookiecutter.environment}}
-       - Key: "Owner"
-         Value: {{cookiecutter.owner}}
-       - Key: "CostCenter"
-         Value: {{cookiecutter.costcenter}}
-       - Key: "ProductName"
-         Value: {{cookiecutter.productname}}
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function

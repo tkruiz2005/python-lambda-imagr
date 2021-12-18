@@ -2,6 +2,9 @@
 
 A cookiecutter template to create a Python Hello world boilerplate using [Serverless Application Model (SAM)](https://github.com/awslabs/serverless-application-model).
 
+This template creates a Serverless Application that reacts to EC2 Instance State change events, demonstrating the power of event-driven development with Amazon EventBridge.
+
+
 ## Requirements
 
 * [AWS SAM CLI](https://github.com/awslabs/aws-sam-cli)
@@ -10,8 +13,6 @@ A cookiecutter template to create a Python Hello world boilerplate using [Server
 
 Generate a boilerplate template in your current project directory using the following syntax:
 
-* **Python 3.9**: `sam init --runtime python3.9`
-* **Python 3.8**: `sam init --runtime python3.8`
 * **Python 3.7**: `sam init --runtime python3.7`
 * **Python 3.6**: `sam init --runtime python3.6`
 * **Python 2.7**: `sam init --runtime python2.7`

@@ -1,8 +1,7 @@
 {
-    "project_name": "Nombre del proyecto",
+    "project_name": "Name of the project",
     "runtime": "python3.9",
-    "owner": "Supervielle",
-    "costcenter": "99999",
-    "environment": "Desarrollo",
-    "productname": "Producto"
- }
+    "architectures": {
+        "value": []
+    }
+}
